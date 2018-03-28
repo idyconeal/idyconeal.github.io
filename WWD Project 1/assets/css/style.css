@@ -1,0 +1,296 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+
+	margin: 0;
+	/*background: #D3D3D3;*/
+	background: white;
+}
+.dashboard {
+	height: 700px;
+	padding-top: 60px;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 40% 60%;
+	grid-template-areas:
+		"top-results top-results"
+		"related-results related-artists"
+	;
+}
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	overflow: hidden;
+	width: 100%;
+	height: 60px;
+	background: linear-gradient(90deg, #A3A2D8, #E3DCF4);
+	position: fixed;
+	z-index: 100;
+	border: 1px solid #36393b;
+}
+.search-bar {
+	display: inline-block;
+	position: relative;
+	right: 120px;
+	width: 260px;
+	height: 40px;
+	margin-top: 8px;
+
+}
+
+.search-bar input[type=text] {
+	float: right;
+ 	position: absolute;
+ 	width: 80%;
+ 	height: 100%;
+    border: 1px solid grey;
+    font-size: 17px;
+
+}
+
+.search-bar button {
+	float: right;
+	position: absolute;
+	right: 0;
+	width: 20%;
+	height: 100%;
+  	background: #2196F3;
+  	color: white;
+  	font-size: 17px;
+  	border: 1px solid grey;
+  	border-left: none;
+  	cursor: pointer;
+}
+.AZ-logo {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-30px);
+	width: 60px;
+	height: 60px;
+}
+.AZ-logo img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
+
+/* Top Results */
+.top-results-container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-area: top-results;
+	grid-template-rows: 35% 65%;
+	grid-template-areas: 
+		"top-results"
+		"top-result-song";
+}
+.image {
+	position: absolute;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-image: url(../img/migos.jpg);
+	background-size: contain;
+	opacity: 0.3;
+}
+.overlay {
+	position: absolute;
+	background-color: black;
+	opacity: 0.5;
+	z-index: 8;
+}
+.top-results{
+	margin-bottom: -10px;
+	display: flex;
+	justify-content: center;
+	align-items:flex-end;
+	font-weight: 700;
+	font-size: 24px;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.top-result-song {
+	z-index: 3;
+	margin-top: -20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+.album-cover {
+	position: relative;
+	height: 100px;
+	width: 100px;
+	margin-right: 20px;
+	
+}
+.album-cover img {
+	object-fit: contain;
+	height: 100%;
+	width: 100%;
+}
+.album-cover:hover > .shadow {
+	opacity: 0.7;
+	
+}
+.song-name {
+	display: flex;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 24px;
+	cursor: pointer;
+	
+
+}
+.song-name:hover {
+	color: #856CCB;
+	
+}
+/* Related Results */
+.related-results-container {
+	grid-area: related-results;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.related-results {
+	margin-top: -10px;
+	padding-bottom: 10px;
+	font-size: 24px;
+	cursor: pointer;
+	opacity: 0.8;
+	
+}
+
+.related-song-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.related-song {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+}
+.song {
+	opacity: 0.8;
+}
+.song:hover {
+	/*color: #124F7D;*/
+	opacity: 1.0;
+	color: #856CCB;
+}
+.song-cover {
+	z-index: 3;
+	margin-right: 10px;
+	margin-bottom: 15px;
+	height: 90px;
+	width: 90px;
+	position: relative;
+}
+.song-cover img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+.shadow { 
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	position: absolute;	
+	height: 100%;
+	width: 100%;
+	background: black;
+	opacity: 0;
+	color: white;
+}
+
+.song-cover:hover > .shadow {
+	opacity: 0.7;
+}
+/*.shadow {
+	height: 90px;
+	width: 90px;
+}
+.shadow img {
+	object-fit: contain;
+	height: 100%;
+	width: 100%;
+} */
+/* Related Artist */
+.related-artist-container {
+	grid-area: related-artists;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+.related-artist-result {
+	margin-top: -10px;
+	padding-bottom: 10px;
+	font-size: 24px;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+.artist-container {
+	display: flex;
+	flex-direction: column;
+}
+.related-artist {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	cursor: pointer;
+}
+.artist {
+	opacity: 0.8;
+}
+.artist:hover {
+	opacity: 1.0;
+	color: #856CCB;
+	
+}
+.artist-cover {
+	margin-right: 10px;
+	padding-bottom: 10px;
+	height: 100px;
+	width: 100px;
+	border-radius: 50px;
+
+}
+.artist-cover img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	border-radius: 50px;
+}
+.see-more {
+	font-size: 14px;
+	cursor: pointer;
+}
+.see-more:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+
+
+
+
+
+
+
+
