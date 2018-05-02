@@ -9,16 +9,7 @@ a {
 	text-decoration: none;
 }
 
-.header {
-	display: flex;
-	flex-direction: row;
-	width: 1450px;
-	height: 80px;
-	position: relative;
-	z-index: 5;
-	box-shadow: 0px 3px 15px black;
 
-}
 /* home page */
 .name {
 	position: absolute;
@@ -37,7 +28,7 @@ a {
 	z-index: 6;
 	font-weight: bold;
 	font-size: 40;
-	margin-top: 90px;
+	margin-top: 90px; 
 }
 .love {
 	display: none;
@@ -74,19 +65,21 @@ a {
 .home-img {
 	position: absolute;
 	z-index: 5;
-	width: 1350;
-	height: 780;
-	border-radius: 50%;
+	width: 1450;
+	height: 870;
+	
+	/*height: 780;
 	margin-top: 34px;
-	box-shadow: 0px 10px 12px 0.2em black, 0px -10px 20px 0.1em black;
+	border-radius: 50%;
+	box-shadow: 0px 10px 12px 0.2em black, 0px -10px 20px 0.1em black;*/
 		
 }
 .home-img img {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
-	border-radius: 50%;
-	opacity: 0.8;
+	/*border-radius: 50%;
+	opacity: 0.8;*/
 }
 .dashboard {
 	width: 1450px;
@@ -103,15 +96,35 @@ a {
 }
 
 /* other pages nav bar */
-
-.logo-box {
+.header {
 	display: flex;
-	width: 80px;
+	flex-direction: row;
+	width: 1450px;
+	height: 80px;
+	position: relative;
+	z-index: 5;
+	box-shadow: 0px 3px 15px black;
+}
+.nav-pic {
+	width: 1450px;
 	height: 80px;
 	position: absolute;
-	top: 40px;
-	left: 50px;
 	z-index: 6;
+}
+.nav-pic img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.logo-box {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 20px;
+	left: 80px;
+	z-index: 10;
 }
 .logo-box img {
 	width: 100%;
@@ -148,14 +161,14 @@ a {
 /* about page */
 .page-layout {
 	width: 1450px;
-	height: 750px;
-	background: white;
+	/*height: 750px;*/
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 100%;
 	grid-template-areas: 
 		"picture about-box";
 }
+
 .picture {
 	width: 400;
 	height: 500;
