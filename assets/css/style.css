@@ -1,0 +1,366 @@
+body {
+	height: 100vh;
+    width: 100vw;
+    margin: 0;
+	font-family: 'Nunito', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+/* home page */
+.name {
+	position: absolute;
+	z-index: 6;
+	font-weight: bold;
+	font-size: 70;
+	margin-top: 20px;
+}
+.name:hover{
+	cursor: pointer;
+}
+.welcome {
+	display: none;
+	font-family: 'Cabin Sketch', cursive;
+	position: absolute;
+	z-index: 6;
+	font-weight: bold;
+	font-size: 40;
+	margin-top: 90px; 
+}
+.love {
+	display: none;
+	font-family: 'Cabin Sketch', cursive;
+	position: absolute;
+	z-index: 6;
+	font-weight: bold;
+	font-size: 40;
+	margin-top: 90px;
+}
+.main-menu {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	z-index: 6;
+	margin-top: 300;
+	margin-left: 25;
+	width: 800px;
+	height: 80px;
+
+}
+.item {
+	font-family: 'Cabin Sketch', cursive;
+	display:flex;
+	padding-right: 25px;
+	font-weight: bold;
+	font-size: 30;
+	color: black;
+}
+.item:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+.home-img {
+	position: absolute;
+	z-index: 5;
+	width: 1450;
+	height: 870;
+	
+	/*height: 780;
+	margin-top: 34px;
+	border-radius: 50%;
+	box-shadow: 0px 10px 12px 0.2em black, 0px -10px 20px 0.1em black;*/
+		
+}
+.home-img img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	/*border-radius: 50%;
+	opacity: 0.8;*/
+}
+.dashboard {
+	width: 1450px;
+	height: 730px;
+	position: relative;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+/* other pages nav bar */
+.header {
+	display: flex;
+	flex-direction: row;
+	width: 1450px;
+	height: 80px;
+	position: relative;
+	z-index: 5;
+	box-shadow: 0px 3px 15px black;
+}
+.nav-pic {
+	width: 1450px;
+	height: 80px;
+	position: absolute;
+	z-index: 6;
+}
+.nav-pic img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+.logo-box {
+	display: flex;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 20px;
+	left: 80px;
+	z-index: 10;
+}
+.logo-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+.logo-box:hover {
+	opacity: 0.8;
+	cursor: pointer;
+}
+.menu {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	position: absolute;
+	z-index: 6;
+	width: 1350px;
+	height: 80px;
+
+}
+.menu-item {
+	font-weight: bold;
+	font-size: 20;
+	color: black;
+	margin-right: 50px;
+	margin-bottom: 20px;
+}
+.menu-item:hover {
+	color: grey;
+	opacity: 0.8;
+	cursor: pointer;
+}
+
+/* about page */
+.page-layout {
+	width: 1450px;
+	/*height: 750px;*/
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100%;
+	grid-template-areas: 
+		"picture about-box";
+}
+
+.picture {
+	width: 400;
+	height: 500;
+	grid-area: picture;
+	margin-top: 80;
+	margin-left: 180;
+	box-shadow: 0px 2px 15px grey, 0px -2px 15px grey;
+}
+.picture img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	
+}
+.about-box {
+	grid-area: about-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 130px;
+	margin-left: -20;
+	width: 500px;
+	height: 400px;
+	border-radius: 25px;
+	
+}
+.hello {
+	font-family: 'Cabin Sketch', cursive;
+	font-size: 50;
+	text-shadow: 0px 0px;
+	color: black;
+}
+.text {
+	font-size: 20;
+	padding-left: 10px;
+	padding-top: 20px;
+}
+.background {
+	width: 1450px;
+	height: 1500px;
+	background: white;
+}
+.search {
+	width: 700px;
+	height: 388px;
+	margin-left: 400px;
+	margin-top: 50px;
+}
+.search img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	padding: 3px;
+	border:1px solid rgb(0, 82, 204);
+	background-color: rgb(0, 82, 204);
+}
+.shadow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;	
+	width: 705.5px;
+	height: 394px;
+	background: black;
+	opacity: 0;
+	color: white;
+}
+.search:hover > .shadow {
+	opacity: 0.8;
+}
+.fashion-advisor {
+	width: 900;
+	height: 360;
+	margin-left: 300px;
+	margin-top: 50px;
+}
+.fashion-advisor img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	padding: 3px;
+	border:1px solid rgb(0, 82, 204);
+	background-color: rgb(0, 82, 204);
+}
+.fashion-shadow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;	
+	width: 905.5px;
+	height: 365px;
+	background: black;
+	opacity: 0;
+	color: white;
+}
+.fashion-advisor:hover > .fashion-shadow {
+	opacity: 0.8;
+}
+/*fashion advisor page*/
+.dash {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 80px;
+}
+
+.one {
+	width: 850px;
+	height: 500px;
+	padding-bottom: 40px;
+	margin-top: -60px;
+}
+.one img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 20px;
+}
+.textbox1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 850px;
+	height: 150px;
+	margin-top: 350px;
+	background: black;
+	opacity: 0;
+	color: white;
+}
+.one:hover > .textbox1 {
+	opacity: 0.8;
+}
+.two {
+	width: 850px;
+	height: 515px;
+	padding-bottom: 40px;
+}
+.two img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+.textbox2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 850px;
+	height: 150px;
+	margin-top: 363px;
+	background: black;
+	opacity: 0;
+	color: white;
+}
+.two:hover > .textbox2 {
+	opacity: 0.8;
+}
+.three {
+	width: 800px;
+	height:630px;
+	padding-bottom: 40px;
+}
+.three img {
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+.textbox3 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 676px;
+	margin-left: 63px;
+	height: 150px;
+	margin-top: 480px;
+	background: black;
+	opacity: 0;
+	color: white;
+}
+.three:hover > .textbox3 {
+	opacity: 0.8;
+}
+
+
+
+
+
+
